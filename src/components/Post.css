@@ -1,0 +1,40 @@
+.post {
+  background-color: #edf7fa;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.recentPost {
+  background-color: #edf7fa;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 110px;
+}
+.recentPost button {
+  border: none;
+  background-color: #edf7fa;
+  color: #2fb7d4;
+  font-size: 15px;
+}
+.postBodyFlex {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 90px;
+}
+.postBodyGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+li {
+  background-color: white;
+  width: 300px;
+  list-style-type: none;
+  padding: 20px 15px;
+  margin: 10px;
+}
+button {
+  cursor: pointer;
+}
