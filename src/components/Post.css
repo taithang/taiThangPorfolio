@@ -1,4 +1,4 @@
-.post {
+/* .post {
   background-color: #edf7fa;
   display: flex;
   flex-direction: column;
@@ -16,25 +16,27 @@
   background-color: #edf7fa;
   color: #2fb7d4;
   font-size: 15px;
-}
+} */
 .postBodyFlex {
   display: flex;
   justify-content: space-around;
   padding: 0px 90px;
+  background-color: #edf7fa;
 }
 .postBodyGrid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  background-color: #edf7fa;
 }
 
-li {
+/* li {
   background-color: white;
   width: 300px;
   list-style-type: none;
   padding: 20px 15px;
   margin: 10px;
-}
-button {
+} */
+/* button {
   cursor: pointer;
-}
+} */

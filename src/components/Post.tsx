@@ -66,29 +66,34 @@ const postArray2 = [
 function Post() {
   const [showAll, setShowAll] = useState(false);
   return (
-    <div className="post">
-      <div className="recentPost">
-        <p style={{ fontSize: "20px", margin: "0" }}>Recent posts</p>
-        <button onClick={() => setShowAll(!showAll)}>View all</button>
+    <div className="bg-#edf7fa flex flex-col mt-[50px]">
+      <div className="bg-[#edf7fa] h-[50px] flex justify-between py-[10px] px-[110px]">
+        <p style={{ fontSize: "22px", margin: "0" }}>Recent posts</p>
+        <button
+          className="border-0 bg-[#edf7fa] text-[#2fb7d4] text-[15px] cursor-pointer"
+          onClick={() => setShowAll(!showAll)}
+        >
+          View all
+        </button>
       </div>
       <ul className={showAll ? "postBodyGrid" : "postBodyFlex"}>
         {postArray1.map((post) => (
-          <li>
+          <li className="li-works">
             <b>{post.title}</b>
-            <p>
+            <p className="text-[18px]">
               {post.day} | {post.skill}
             </p>
-            <p>{post.content}</p>
+            <p className="text-[16px]">{post.content}</p>
           </li>
         ))}
         {showAll &&
           postArray2.map((post) => (
-            <li>
+            <li className="li-works">
               <b>{post.title}</b>
-              <p>
+              <p className="text-[18px]">
                 {post.day} | {post.skill}
               </p>
-              <p>{post.content}</p>
+              <p className="text-[16px]">{post.content}</p>
             </li>
           ))}
       </ul>

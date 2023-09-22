@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .li-works {
+    @apply text-[26px] bg-white w-[350px] py-[20px] px-[15px] m-[10px] list-none space-y-[15px];
+  }
+}

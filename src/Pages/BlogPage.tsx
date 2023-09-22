@@ -1,8 +1,9 @@
-import { Layout, Space } from "antd";
 import React from "react";
-import Body from "../components/Body";
 import Head from "../components/Head";
 import Foot from "../components/Foot";
+import BlogContain from "../components/BlogContain";
+import { Layout, Space } from "antd";
+
 const { Header, Footer, Sider, Content } = Layout;
 
 const headerStyle: React.CSSProperties = {
@@ -22,7 +23,7 @@ const contentStyle: React.CSSProperties = {
   minHeight: 120,
   // lineHeight: "120px",
   color: "black",
-  backgroundColor: "#108ee9",
+  backgroundColor: "white",
   height: "60%",
   margin: "10px 0px",
 };
@@ -45,7 +46,7 @@ const footerStyle: React.CSSProperties = {
   // width: "100%",
 };
 
-function HomePage() {
+function BlogPage() {
   return (
     <div>
       <Space direction="vertical" style={{ width: "100%" }} size={[0, 48]}>
@@ -54,7 +55,7 @@ function HomePage() {
             <Head />
           </Header>
           <Content style={contentStyle}>
-            <Body />
+            <BlogContain />
           </Content>
           <Footer style={footerStyle}>
             <Foot />
@@ -65,4 +66,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default BlogPage;

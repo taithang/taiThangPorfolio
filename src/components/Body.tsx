@@ -5,7 +5,7 @@ import Works from "./Works";
 
 function Body() {
   return (
-    <div className="body" style={{ display: "flex", flexDirection: "column" }}>
+    <div className="flex flex-col bg-white space-y-[50px]">
       <PersonalInf />
       <Post />
       <Works />

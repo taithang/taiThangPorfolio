@@ -1,5 +1,9 @@
 import React from "react";
 import "./Works.css";
+import dashBoard from "../assets/Cashflow-dashboard-example.png";
+import illustration from "../assets/illustration.png";
+import typography from "../assets/typograhy.png";
+import components from "../assets/components.png";
 
 const worksArray = [
   {
@@ -8,7 +12,7 @@ const worksArray = [
     type: "Dashboard",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sint cupiditate omnis, ullam illum consectetur dolore error doloremque quasi labore sit quidem, laudantium excepturi, facere eius ab similique consequuntur a?",
-    picture: "../assets/Cashflow-dashboard-example.png",
+    picture: dashBoard,
   },
   {
     title: "Vibrant Portraits of 2020",
@@ -16,7 +20,7 @@ const worksArray = [
     type: "Illustration",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sint cupiditate omnis, ullam illum consectetur dolore error doloremque quasi labore sit quidem, laudantium excepturi, facere eius ab similique consequuntur a?",
-    picture: "../assets/illustration.png",
+    picture: illustration,
   },
   {
     title: "36 Days of Malayalam type",
@@ -24,7 +28,7 @@ const worksArray = [
     type: "Typography",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sint cupiditate omnis, ullam illum consectetur dolore error doloremque quasi labore sit quidem, laudantium excepturi, facere eius ab similique consequuntur a?",
-    picture: "../assets/typograhy.png",
+    picture: typography,
   },
   {
     title: "Components",
@@ -32,23 +36,30 @@ const worksArray = [
     type: "Components, Design",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sint cupiditate omnis, ullam illum consectetur dolore error doloremque quasi labore sit quidem, laudantium excepturi, facere eius ab similique consequuntur a?",
-    picture: "../assets/components.png",
+    picture: components,
   },
 ];
 function Works() {
   return (
-    <div>
-      <p className="font-bold h-20px ">Featured Works</p>
-      <ul>
+    <div className="space-y-[30px]">
+      <p className="text-[20px] px-[110px]">Featured Works</p>
+      <ul className="space-y-[20px]">
         {worksArray.map((work) => (
-          <li>
-            <img src={work.picture} alt={work.title} />
-            <div className="workContent">
-              <p>{work.title}</p>
-              <div>
-                <p>{work.year}</p>
-                <p>{work.type}</p>
+          <li className="flex w-[80%] space-x-[20px] m-auto border-b-[2px] border-solid pb-[30px] justify-center">
+            <img
+              src={work.picture}
+              alt={work.title}
+              className="w-[20%] h-[5%] rounded-lg"
+            />
+            <div className="w-[60%] space-y-[10px]">
+              <p className="font-bold text-[30px]">{work.title}</p>
+              <div className="flex space-x-[15px] items-center">
+                <p className="border text-white bg-black font-bold w-[60px] h-[25px] text-center rounded-full">
+                  {work.year}
+                </p>
+                <p className="text-[20px]">{work.type}</p>
               </div>
+              <p className="text-[16px]">{work.content}</p>
             </div>
           </li>
         ))}

@@ -1,12 +1,21 @@
 import { Col, Row } from "antd";
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Head() {
   return (
     <Row style={{ width: "15%" }}>
-      <Col span={8}>Works</Col>
-      <Col span={8}>Blog</Col>
-      <Col span={8}>Contact</Col>
+      <Col span={8}>
+        <Link to="/works">Works</Link>
+      </Col>
+
+      <Col span={8}>
+        <Link to="/blog">Blog</Link>
+      </Col>
+
+      <Col span={8}>
+        <Link to="/contact">Contact</Link>
+      </Col>
     </Row>
   );
 }
