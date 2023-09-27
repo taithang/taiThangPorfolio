@@ -3,12 +3,12 @@ import PersonalInf from "./PersonalInf";
 import Post from "./Post";
 import Works from "./Works";
 
-function Body() {
+function Body({ worksArray }) {
   return (
     <div className="flex flex-col bg-white space-y-[50px]">
       <PersonalInf />
       <Post />
-      <Works />
+      <Works worksArray={worksArray} />
     </div>
   );
 }

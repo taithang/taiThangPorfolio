@@ -1,5 +1,4 @@
 import React from "react";
-import "./personalInf.css";
 import image from "../assets/avatar.jpg";
 import ExamplePdf from "../assets/HoangTaiThang_CV.pdf";
 function PersonalInf() {

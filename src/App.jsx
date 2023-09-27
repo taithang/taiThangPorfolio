@@ -1,12 +1,18 @@
-import React from "react";
-import "./Works.css";
-import dashBoard from "../assets/Cashflow-dashboard-example.png";
-import illustration from "../assets/illustration.png";
-import typography from "../assets/typograhy.png";
-import components from "../assets/components.png";
-
+import BlogPage from "./Pages/BlogPage";
+import HomePage from "./Pages/HomePage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import WorkPage from "./Pages/WorkPage";
+import Contact from "./Pages/ContactPage";
+import "./App.css";
+import WorkPageDetail from "./Pages/WorkPageDetail";
+import { useState } from "react";
+import dashBoard from "./assets/Cashflow-dashboard-example.png";
+import illustration from "./assets/illustration.png";
+import typography from "./assets/typography.png";
+import components from "./assets/components.png";
 const worksArray = [
   {
+    id: 1,
     title: "Designing Dashboards",
     year: "2020",
     type: "Dashboard",
@@ -15,6 +21,7 @@ const worksArray = [
     picture: dashBoard,
   },
   {
+    id: 2,
     title: "Vibrant Portraits of 2020",
     year: "2018",
     type: "Illustration",
@@ -23,6 +30,7 @@ const worksArray = [
     picture: illustration,
   },
   {
+    id: 3,
     title: "36 Days of Malayalam type",
     year: "2018",
     type: "Typography",
@@ -31,6 +39,7 @@ const worksArray = [
     picture: typography,
   },
   {
+    id: 4,
     title: "Components",
     year: "2018",
     type: "Components, Design",
@@ -39,33 +48,25 @@ const worksArray = [
     picture: components,
   },
 ];
-function Works() {
+
+function App() {
   return (
-    <div className="space-y-[30px]">
-      <p className="text-[20px] px-[110px]">Featured Works</p>
-      <ul className="space-y-[20px]">
-        {worksArray.map((work) => (
-          <li className="flex w-[80%] space-x-[20px] m-auto border-b-[2px] border-solid pb-[30px] justify-center">
-            <img
-              src={work.picture}
-              alt={work.title}
-              className="w-[20%] h-[5%] rounded-lg"
-            />
-            <div className="w-[60%] space-y-[10px]">
-              <p className="font-bold text-[30px]">{work.title}</p>
-              <div className="flex space-x-[15px] items-center">
-                <p className="border text-white bg-black font-bold w-[60px] h-[25px] text-center rounded-full">
-                  {work.year}
-                </p>
-                <p className="text-[20px]">{work.type}</p>
-              </div>
-              <p className="text-[16px]">{work.content}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage worksArray={worksArray} />} />
+          <Route path="/works" element={<WorkPage worksArray={worksArray} />} />
+          <Route
+            path="works/:id"
+            element={<WorkPageDetail worksArray={worksArray} />}
+          />
+
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
 
-export default Works;
+export default App;

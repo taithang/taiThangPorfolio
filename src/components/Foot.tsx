@@ -9,7 +9,7 @@ function Foot() {
     "https://www.linkedin.com/in/thang-hoang-tai-a75058290/";
 
   return (
-    <div className="space-y-[20px]">
+    <footer className="space-y-[20px] ">
       <div className="flex justify-center items-center space-x-[20px] h-[30%]">
         <Link to={facebook} target="blank">
           <Facebook className="text-black text-[100px]" />
@@ -21,10 +21,10 @@ function Foot() {
           <LinkedIn className="text-black text-[100px]" />
         </Link>
       </div>
-      <p className="text-black text-[14px]">
+      <p className="text-black text-[14px] text-center">
         Copyright &copy;2020 All rights reserved
       </p>
-    </div>
+    </footer>
   );
 }
 
