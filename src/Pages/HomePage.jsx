@@ -45,7 +45,7 @@ const footerStyle = {
   // width: "100%",
 };
 
-function HomePage({ showWork, setShowWork, selectWork, worksArray }) {
+function HomePage({ worksArray }) {
   return (
     <div>
       <Space direction="vertical" style={{ width: "100%" }} size={[0, 48]}>

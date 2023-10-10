@@ -11,7 +11,7 @@ function Works({ worksArray }) {
         {worksArray.map((work) => (
           <li>
             <Link
-              to={`/works/${work.id}?title=${work.title}&year=${work.year}&type=${work.type}&content=${work.content}&picture=${work.picture}`}
+              to={`/works/${work.id}?title=${work.title}&year=${work.year}&type=${work.type}&content=${work.content}&picture=${work.picture}&picture2=${work.picture2}`}
               className="flex w-[80%] space-x-[20px] m-auto border-b-[2px] border-solid pb-[30px] justify-center"
             >
               <img
@@ -19,7 +19,7 @@ function Works({ worksArray }) {
                 alt={work.title}
                 className="w-[20%] h-[5%] rounded-lg"
               />
-              <div className="w-[60%] space-y-[10px]">
+              <div className="w-[60%] space-y-[10px] ">
                 <p className="font-bold text-[30px]">{work.title}</p>
                 <div className="flex space-x-[15px] items-center">
                   <p className="border text-white bg-black font-bold w-[60px] h-[25px] text-center rounded-full">

@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "../components/Head";
 import Works from "../components/Works";
-import { Link } from "react-router-dom";
 import Foot from "../components/Foot";
 
 function WorkPage({ worksArray }) {
